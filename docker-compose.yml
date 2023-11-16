@@ -1,8 +1,9 @@
 version: "3"
 services:
   redis:
-    image: redis:latest
-    command: redis-server
+    image: 'docker.dragonflydb.io/dragonflydb/dragonfly'
+    ulimits:
+      memlock: -1
     expose:
       - "6379"
     ports:
